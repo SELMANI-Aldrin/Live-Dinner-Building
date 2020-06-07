@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Live Dinner Building</title>
+	<link rel="stylesheet" href={{url_for('static', filename='css/nav.css')}}>
+	<link rel="stylesheet" type="text/css" href= {% block style %}{% endblock %}>
+	{% block Sstyle %}{% endblock %}
+</head>
+
+<body>
+	<div class='topnav'>
+		<p class="Restaurant">Aldrin's Restaurant</p>
+		<div class="icobox"><img class="ico" src={{url_for('static', filename='images/Icone.png')}} alt=""></div>
+		<a class="active" href={{url_for('index')}}>Accueil</a>
+		<a href={{url_for('Recipes')}}>Ingrédients</a>
+		<a href={{url_for('Description')}}>A propos de nous</a>
+	</div>
+	{% block body %}
+	{% endblock %}
+	
+</body>
+</html>

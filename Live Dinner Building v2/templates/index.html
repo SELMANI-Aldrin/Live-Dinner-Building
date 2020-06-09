@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+{% block style %}{{url_for('static', filename='css/index.css')}}{% endblock %}
+{% block body %}
+	<h1>Bienvenue sur ce menu en ligne!</h1>
+	<h2>Comment vous appelez-vous?</h2>
+	<div class="formname">
+		<form action="{{url_for('SetName')}}" method="get">
+			<label>Nom : </label><input type="text" name="nom" value="HungryMan" />
+			<input type="submit" value="Envoyer" />
+		</form>
+	</div>
+	<br><br>
+	<h2>Vous n'avez pas d'idée? <br> Optez pour un repas du jour!</h2>
+	<a href="/Rand"><button><span>Repas du jour</span></button></a>
+{% endblock %}

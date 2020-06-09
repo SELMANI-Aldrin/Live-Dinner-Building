@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block style %}{{url_for('static', filename='css/style.css')}}{% endblock %}
+{% block Sstyle %}<link rel="stylesheet" type="text/css" href= {{url_for('static', filename='css/{}'.format(Which_Dessert))}}>{% endblock %}
+
+{% block body %}
+	<h1 style="height: 39px; font-size: 3.5vw;"> Le dernier mais pas des moindres: le dessert!</h1>
+	<form class="A"> 
+		<table>
+			<tr>
+				<td class="radiobutton"><input type="radio" id= "Citron" name="Dessert" value="Citron" checked></td>
+				<td><label for="Citron">Tarte aux citrons meringuée 8.50</label></td>
+				<td class="radiobutton"><input type="radio" id= "Coupe" name="Dessert" value="Coupe" ></td>
+				<td><label for="Coupe">Coupe de glace gourmande 6.50</label></td>
+				<td class="radiobutton"><input type="radio" id= "Eclairs" name="Dessert" value="Eclairs" ></td>
+				<td><label for="Eclairs">Eclairs maison(3) 5.00</label></td>
+				<td class="radiobutton"><input type="radio" id= "Tiramisu" name="Dessert" value="Tiramisu" ></td>
+				<td><label for="Tiramisu">Tiramisu 6.00</label></td>
+			</tr>	
+		</table>
+		<br>
+		<button type="submit">Choisir</button>
+	</form>
+
+	<form class="B">
+		<input type="submit" id ="Désélectionner" name ="Désélectionner" value="Désélectionner">
+	</form>
+
+	<a href="/Bill"> <img class="next" src={{url_for('static', filename='images/Fleche.webp')}} alt=""> </a>	
+
+	<div class="imgs">
+		{% if session["Starter"] != None %}
+			<a href="/Step1"><img id='Starter'class="Starter" src={{url_for('static', filename='images/Starter/{}.png'.format(session["Starter"]))}}></a>
+		{%endif%}
+
+		{% if session["Main"] != None %}
+			<a href="/Step2"><img id='Main'class="Main" src={{url_for('static', filename='images/Main/{}.png'.format(session["Main"]))}}></a>
+		{%endif%}
+
+		{% if session["Cheese"] != None %}
+			<a href="/Step3"><img id='Cheese'class="Cheese" src={{url_for('static', filename='images/Cheese/{}.png'.format(session["Cheese"]))}}></a>
+		{%endif%}
+
+		{% if Which_Dessert != 'None.css' %}
+			<img id='Dessert'class="Dessert" src={{url_for('static', filename='images/Dessert/{}.png'.format(Which_Dessert.replace(".css","")))}}>
+		{%endif%}
+		
+		<img id="ProgressBar" style="width: 100%;" src="{{url_for('static', filename='images/Progress.png')}}">
+		
+	</div>
+  
+{% endblock %}

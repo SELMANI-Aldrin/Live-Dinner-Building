@@ -1,0 +1,91 @@
+body{margin:0}
+a{
+	text-decoration: none;
+	color:black
+}
+a:hover{
+	text-decoration: underline;
+	text-decoration-color: darkblue ;
+}
+
+h1{
+	width: 100%;
+	color: rgb(54, 0, 0);
+	margin: 8px auto;
+	text-align: center;
+}
+
+.tableaufacture{
+	margin: 0 auto;
+	width: 50%;
+	margin-bottom: 5px;
+}
+
+.Resto{
+	font-weight: bold;
+	text-align: center;
+}
+
+.SResto {
+	font-size: 90%;
+	text-align: center;
+	color: rgb(39, 39, 39);
+}
+
+.horaire {
+	text-align: center;
+	font-size: 85%;
+	color: rgb(19, 19, 19);
+	padding-bottom: 5px;
+	border-bottom: 1px dashed black;
+}
+
+.tot{
+	font-weight: bold;
+}
+
+.last {
+	padding-bottom: 5px;
+	border-bottom: 1px dashed black;
+}
+
+.prix {
+	text-align: right;
+}
+
+.dots {
+	text-align: center;
+}
+
+td.article {
+	width: 110px;
+	height: 30px;
+	padding-left: 10px;
+}
+
+td.prix {
+	width: 60px;
+	height: 30px;
+	padding-right: 10px;
+}
+
+.no {
+	color: rgb(240, 240, 240);
+}
+
+.principal {
+	border-bottom: 1px solid black;
+}
+
+.TitleTicket {
+	text-align: center;
+	font-weight: bolder;
+	font-size: 150%;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+table {
+	background-color: rgb(240, 240, 240);
+}
+

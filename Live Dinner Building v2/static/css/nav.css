@@ -1,0 +1,58 @@
+.topnav{
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+}
+
+.topnav a{
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.ico{
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    float: left;
+    border-radius: 50px;
+    padding: 3px 3px;
+    width: 42px;
+    padding-left: 0px;
+}
+
+.ico2{
+    width: 12.5%;
+    text-align: center;
+    padding: 0;
+    border-width: 0;
+    border-radius: 50px;
+    margin: 0 43.25%;
+}
+
+.icobox {
+    padding-right: 4px;
+    background-color: crimson;
+    float: left;
+}
+
+.Restaurant{
+    background-color: crimson;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0 0;
+    padding-left: 5%;
+    padding-right: 2%;
+}
+
+.topnav a:hover{
+    background-color: rgb(76, 175, 150);
+}

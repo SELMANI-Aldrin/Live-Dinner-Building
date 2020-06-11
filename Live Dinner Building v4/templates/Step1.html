@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block style %}{{url_for('static', filename='css/style.css')}}{% endblock %}
+{% block Sstyle %}<link rel="stylesheet" type="text/css" href= {{url_for('static', filename='css/{}'.format(Which_Starter))}}>{% endblock %}
+
+{% block body %}
+
+	<h1>Bien {{username}} ! Choisissons l'entrée :</h1>
+	<div class="head">
+	<form class="A">
+		<table>
+			<tr>
+				<td class="radiobutton one"><input type="radio" id="Oeuf" name="Starter" value="Oeuf" checked></td>
+				<td class="one"><label for="Oeuf">Oeuf à la coque 4.00</label></td>
+				<td class="radiobutton one"><input type="radio" id="Salade" name="Starter" value="Salade"></td>
+				<td class="one"><label for="Salade">Salade 7.50</label></td>
+				<td class="radiobutton one"><input type="radio" id="Tomates" name="Starter" value="Tomates"></td>
+				<td class="one"><label for="Tomates">Tranches de tomates 3.50</label></td>
+				<td class="radiobutton one"><input type="radio" id="Carrotes" name="Starter" value="Carrotes"></td>
+				<td class="one"><label for="Carrotes">Carrotes rapées 4.00</label></td>
+			</tr>
+			<br>
+		</table>
+  		<button type="submit">Choisir</button>
+	</form>
+
+	<form class="B">
+		<input type="submit" id ="Désélectionner" name ="Désélectionner" value="Désélectionner">
+	</form>
+</div>
+	<a href="/Step2"> <img class="next" src={{url_for('static', filename='images/Fleche.webp')}} alt=""> </a>
+	
+	<div class="imgs">
+		{% if Which_Starter != 'None.css' %}
+			<img id='Starter' class="Starter" src={{url_for('static', filename='images/Starter/{}.png'.format(Which_Starter.replace(".css","")))}}>
+		{%endif%}
+
+		<img id="ProgressBar" style="width: 100%;" src="{{url_for('static', filename='images/Progress.png')}}">
+	
+	</div>
+  
+{% endblock %}

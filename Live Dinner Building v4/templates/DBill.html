@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Download Bill</title>
+</head>
+<body>
+	<div>
+		<table cellspacing="0" class = "tableaufacture">
+			<tr><td colspan="3" class="Resto"> Aldrin's Restaurant</td></tr>
+			<tr><td colspan="3" class="SResto"> Le seul restaurant qui n'existe pas</td></tr>
+			<tr><td colspan="3" class="horaire">{{date}} à {{heure}}:{{minute}}</td></tr>
+			<tr><td colspan = "3" class="TitleTicket">Ticket de vente</td></tr>
+
+			<tr class="Bande_article_unitaire">
+				<td class="article principal" style="font-weight: bold;">Article</td>
+				<td class="dots principal no">..............................</td>
+				<td class="prix principal" style="font-weight: bold;"s>EUR</td>
+			</tr>
+			
+			<tr class="Bande_article_unitaire">
+				<td class="article">{{FStarter}}</td>
+				<td class="dots">..............................</td>
+				<td class="prix">{{FStarterPrice}}</td>
+			</tr>
+
+			<tr class="Bande_article_unitaire">
+				<td class="article">{{FMain}}</td>
+				<td class="dots">..............................</td>
+				<td class="prix">{{FMainPrice}}</td>
+			</tr>
+			
+			<tr class="Bande_article_unitaire">
+				<td class="article">{{FCheese}}</td>
+				<td class="dots">..............................</td>
+				<td class="prix">{{FCheesePrice}}</td>
+			</tr>
+			
+			<tr class="Bande_article_unitaire">
+				<td class="article last">{{FDessert}}</td>
+				<td class="dots last">..............................</td>
+				<td class="prix last">{{FDessertPrice}}</td>
+			</tr>
+			
+			<tr class="Bande_article_unitaire">
+				<td class="article tot">Total:</td>
+				<td class="dots">..............................</td>
+				<td class="prix tot">{{TotalPrice}}</td>
+			</tr>
+		</table>
+	</div>
+
+</body>
+</html>

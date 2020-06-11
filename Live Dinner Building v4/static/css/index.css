@@ -1,0 +1,78 @@
+body{margin:0}
+
+h1{
+	color: rgb(54, 0, 0);
+	text-align: center;
+}
+
+h2{ 
+	color: rgb(122, 2, 2);
+	text-align: center;
+}
+
+.formname{
+	text-align: center;
+}
+
+input[type=text] {
+	padding: 8px;
+	border: 1px solid rgba(255, 0, 0, 0.801);
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	margin-right: 5px;
+}
+
+input[type=submit] {
+	cursor: pointer;
+	padding: 8px;
+	color: blue;
+	background-color: rgb(247, 247, 247);
+	border: 1px solid grey;
+	border-radius: 2px;	
+}
+
+input[type=submit]:hover {
+	background-color: rgb(36, 131, 255);
+	color: white;
+}
+
+input[type=submit]:active {
+	background-color: rgb(36, 131, 255);
+	color: white;
+}
+
+label {
+	padding: 9px;
+	padding-top: 10px;
+	border-top-left-radius: 2px ;
+	border-bottom-left-radius: 2px ;
+	background-color: rgba(255, 0, 0, 0.801);
+	color: white;
+}
+
+button {
+	display: block;
+	width: 20%;
+	margin: 5px auto;
+	border: 1px solid grey;
+	border-radius: 2px;
+	padding: 5px 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+button:hover {
+	border: 1px solid grey;
+	background-color: rgb(36, 131, 255);
+	color: white;	
+}
+
+
+
+button {
+	text-align: center;
+	font-size: 120%;
+	color: #001df6;
+}

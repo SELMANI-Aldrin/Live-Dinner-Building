@@ -75,4 +75,30 @@ button {
 	text-align: center;
 	font-size: 120%;
 	color: #001df6;
+	cursor: pointer;
+}
+
+.randtitle{
+	transform: translateY(75%);
+	transition: all 0.5s ease;
+	z-index: 2;
+}
+
+
+.randbtn button{
+	transform: translateY(-75%);
+	transition: all 0.5s ease;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 1;
+
+}
+
+.randmeal:hover .randtitle{
+	transform: translateY(0);
+}
+.randmeal:hover .randbtn button{
+	transform: translateY(0);
+	visibility: visible;
+	opacity: 1;
 }

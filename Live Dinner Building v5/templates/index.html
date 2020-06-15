@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+{% block style %}{{url_for('static', filename='css/index.css')}}{% endblock %}
+{% block Sstyle%}<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">{% endblock %}
+{% block body %}
+	<h1>Bienvenue sur ce menu en ligne!</h1>
+	<h2>Comment vous appelez-vous?</h2>
+	<div class="content">
+		<form class="name-box" action="{{url_for('SetName')}}" method="get">
+			<input spellcheck="false" class="name-text" type="text" name="nom" id="nom" value="HungryMan">
+			<div class="name-button">
+				<div class="svgimage">
+					<svg class="valid" width="72" height="113" viewBox="0 0 72 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M66 112H6C3.23858 112 1 109.761 1 107V88C1 85.2386 3.23858 83 6 83H36C38.7614 83 41 80.7614 41 78V6C41 3.23858 43.2386 1 46 1H66C68.7614 1 71 3.23857 71 6V107C71 109.761 68.7614 112 66 112Z" stroke="black"/>
+					</svg>
+				</div>
+			<input class="inputzone" type="submit" name="" value=" ">
+			</div>
+		</form>
+	</div>
+	<br><br>
+	<div class="randmeal">
+		<h2 class="randtitle">Vous n'avez pas d'idée? <br> Optez pour un repas du jour!</h2>
+		<a class="randbtn" href="/Rand"><button><span>Repas du jour</span></button></a>
+	</div>
+{% endblock %}

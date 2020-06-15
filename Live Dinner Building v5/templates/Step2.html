@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block style %}{{url_for('static', filename = 'css/style.css')}}{% endblock %}
+{% block Sstyle %}<link rel="stylesheet" type="text/css" href= {{url_for('static', filename='css/{}'.format(Which_Main))}}>{% endblock %}
+
+{% block body %}
+	<h1>Et le plat principal?</h1>
+	<div class="head">
+	<form class="A">
+		<table>
+			<tr>
+				<td class="radiobutton">		<input type="radio" id= "Pizza" name="Main" value="Pizza" checked></td>
+				<td><label for="Pizza">Pizza classique 8.50</label></td>
+				<td class="radiobutton"><input type="radio" id= "Sushi" name="Main" value="Sushi"></td>
+				<td><label for="Sushi">Plateau de Sushi frais 9.00</label></td>
+				<td class="radiobutton"><input type="radio" id= "Poisson" name="Main" value="Poisson"></td>
+				<td><label for="Poisson">Poisson frais 8.00</label></td>
+				<td class="radiobutton"><input type="radio" id= "Sphagetti" name="Main" value="Spaghetti"></td>
+				<td><label for="Sphagetti">Sphagetti avec boulettes 7.00</label></td>
+			</tr>	
+		</table>
+		<br>
+		<button type="submit">Choisir</button>
+	</form>
+
+	<form class="B">
+		<input type="submit" id ="Désélectionner" name ="Désélectionner" value="Désélectionner">
+	</form>
+</div>
+	<a href="/Step3"> <img class="next" src={{url_for('static', filename='images/Fleche.webp')}} alt=""> </a>	
+
+	<div class="imgs">
+		{% if session["Starter"] != None %}
+			<a href="/Step1"><img id='Starter'class="Starter" src={{url_for('static', filename='images/Starter/{}.png'.format(session["Starter"]))}}></a>
+		{%endif%}
+
+		{% if Which_Main != 'None.css' %}
+			<img id='Main'class="Main" src={{url_for('static', filename='images/Main/{}.png'.format(Which_Main.replace(".css","")))}}>
+		{%endif%}
+
+		<img id="ProgressBar" style="width: 100%;" src="{{url_for('static', filename='images/Progress.png')}}">
+		
+	</div>
+	
+{% endblock %}

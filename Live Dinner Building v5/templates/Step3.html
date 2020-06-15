@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block style %}{{url_for('static', filename='css/style.css')}}{% endblock %}
+{% block Sstyle %}<link rel="stylesheet" type="text/css" href= {{url_for('static', filename='css/{}'.format(Which_Cheese))}}>{% endblock %}
+
+{% block body %}
+	<h1>Vous aimez le fromage maison?</h1>
+	<div class="head">
+	<form class="A">
+		<table>
+			<tr>
+				<td class="radiobutton"><input type="radio" id= "Brie" name="Cheese" value="Brie" checked></td>
+				<td><label for="Brie">Brie maison 5.00</label></td>
+				<td class="radiobutton"><input type="radio" id= "Gouda" name="Cheese" value="Gouda" ></td>
+				<td><label for="Gouda">Gouda maison 3.50</label></td>
+				<td class="radiobutton"><input type="radio" id= "Camenbert" name="Cheese" value="Camenbert" ></td>
+				<td><label for="Camenbert">Camenbert maison 3.00</label></td>
+				<td class="radiobutton"><input type="radio" id= "Riccota" name="Cheese" value="Riccota" ></td>
+				<td><label for="Riccota">Riccota maison 4.50</label></td>
+			</tr>	
+		</table>
+		<br>
+		<button type="submit">Choisir</button>
+	</form>
+
+	<form class="B">
+		<input type="submit" id ="Désélectionner" name ="Désélectionner" value="Désélectionner">
+	</form>
+	</div>
+	<a href="/Step4"> <img class="next" src={{url_for('static', filename='images/Fleche.webp')}} alt=""> </a>	
+
+	<div class="imgs">
+		{% if session["Starter"] != None %}
+			<a href="/Step1"><img id='Starter'class="Starter" src={{url_for('static', filename='images/Starter/{}.png'.format(session["Starter"]))}}></a>
+		{%endif%}
+
+		{% if session["Main"] != None %}
+			<a href="/Step2"><img id='Main'class="Main" src={{url_for('static', filename='images/Main/{}.png'.format(session["Main"]))}}></a>
+		{%endif%}
+
+		{% if Which_Cheese != 'None.css' %}
+			<img id='Cheese'class="Cheese" src={{url_for('static', filename='images/Cheese/{}.png'.format(Which_Cheese.replace(".css","")))}}>
+		{%endif%}
+
+		<img id="ProgressBar" style="width: 100%;" src="{{url_for('static', filename='images/Progress.png')}}">
+		
+	</div>
+  
+{% endblock %}

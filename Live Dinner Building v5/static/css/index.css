@@ -1,0 +1,174 @@
+body{margin:0}
+
+h1{
+	color: rgb(54, 0, 0);
+	text-align: center;
+}
+
+h2{ 
+	color: rgb(122, 2, 2);
+	text-align: center;
+}
+
+
+button {
+	display: block;
+	width: 20%;
+	margin: 5px auto;
+	border: 1px solid grey;
+	border-radius: 2px;
+	padding: 5px 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+button:hover {
+	border: 1px solid grey;
+	background-color: rgb(36, 131, 255);
+	color: white;	
+}
+
+
+
+button {
+	text-align: center;
+	font-size: 120%;
+	color: #001df6;
+	cursor: pointer;
+}
+
+.randtitle{
+	transform: translateY(75%);
+	transition: all 0.5s ease;
+	z-index: 2;
+}
+
+
+.randbtn button{
+	transform: translateY(-75%);
+	transition: all 0.5s ease;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 1;
+
+}
+
+.randmeal:hover .randtitle{
+	transform: translateY(0);
+}
+.randmeal:hover .randbtn button{
+	transform: translateY(0);
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+
+.name-box{
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2f3640;
+    padding: 10px;
+    height: 40px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.name-button{
+    float: right;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+
+
+.name-button:hover{
+	background: #eb2f06;
+	transform: scale(1.1);
+}
+
+.name-button:hover svg path{
+	stroke: white;
+	fill: white;
+}
+
+.name-text{
+	border: none;
+	padding: 0;
+	outline: none;
+	background: none;
+	float: left;
+	color: #7f8fa6;
+	font-size: 16px;
+	line-height: 40px;
+	width: 0px;
+	transition: 0.5s;
+	font-family: 'Itim', cursive;
+}
+
+.content:hover .name-box .name-text{
+	width: 240px;
+	padding: 0 6px;
+}
+
+
+.svgimage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+
+    z-index: 0;
+    overflow: hidden;
+}
+
+.valid{
+    position: absolute;
+    top: 17.5%;
+    left: 22.5%;
+ 
+    width: 55%;
+    height: 55%;
+    transform: rotate(45deg);
+}
+
+.valid path{
+	stroke: #eb2f06;
+	fill: #eb2f06;
+	transition: 0.5s
+}
+
+
+
+.inputzone{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    margin: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.content{
+	height: 60px;
+}

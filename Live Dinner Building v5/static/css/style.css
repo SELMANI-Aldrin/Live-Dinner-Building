@@ -1,5 +1,5 @@
 body{margin:0}
-
+ 
 h1{
 	margin: 0;
 	padding-top: 9px;
@@ -78,7 +78,6 @@ form.B{
 
 a{
 	margin: 0 auto;
-	color: rgb(2, 12, 58);
 	border-radius: 5px;
 }
 
@@ -135,4 +134,40 @@ a{
 button:hover,input:hover{
 	background-color: rgb(26, 102, 163);
 	color: white;
+}
+svg.next{
+	transition: all ease;
+}
+
+svg.next path{
+	stroke-width: 2px;
+	stroke:crimson;
+   fill:none;
+   fill-opacity:0;
+	stroke-dasharray: 1832px; 
+	stroke-dashoffset: 0px;
+	transition: 2s
+}
+
+svg.next:hover path{
+	animation: arrow 1s ease;
+	animation-fill-mode: forwards;
+}
+  
+@keyframes arrow{
+	0%{
+	  stroke-dasharray: 1832px;
+	stroke-dashoffset: 0px;
+	fill: url(#myG);
+	fill-opacity:0;
+	}
+	
+	100%{
+	  stroke-dasharray: 1832px;
+	stroke-dashoffset: 1832px;
+	fill: url(#myG);
+	fill-opacity:1
+  
+}
+	
 }

@@ -46,15 +46,15 @@
 
 	<div class="imgs">
 		{% if session["Starter"] != None %}
-			<a href="/Step1"><img id='Starter'class="Starter" src={{url_for('static', filename='images/Starter/{}.png'.format(session["Starter"]))}}></a>
+			<a href="/Step1"><img id='Starter' class="Starter" src={{url_for('static', filename='images/Starter/{}.png'.format(session["Starter"]))}}></a>
 		{%endif%}
 
 		{% if session["Main"] != None %}
-			<a href="/Step2"><img id='Main'class="Main" src={{url_for('static', filename='images/Main/{}.png'.format(session["Main"]))}}></a>
+			<a href="/Step2"><img id='Main' class="Main" src={{url_for('static', filename='images/Main/{}.png'.format(session["Main"]))}}></a>
 		{%endif%}
 
 		{% if Which_Cheese != 'None.css' %}
-			<img id='Cheese'class="Cheese" src={{url_for('static', filename='images/Cheese/{}.png'.format(Which_Cheese.replace(".css","")))}}>
+			<img id='Cheese' class="Cheese" src={{url_for('static', filename='images/Cheese/{}.png'.format(Which_Cheese.replace(".css","")))}}>
 		{%endif%}
 
 		<img id="ProgressBar" style="width: 100%;" src="{{url_for('static', filename='images/Progress.png')}}">

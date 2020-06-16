@@ -46,19 +46,19 @@
 
 	<div class="imgs">
 		{% if session["Starter"] != None %}
-			<a href="/Step1"><img id='Starter'class="Starter" src={{url_for('static', filename='images/Starter/{}.png'.format(session["Starter"]))}}></a>
+			<a href="/Step1"><img id='Starter' class="Starter" src={{url_for('static', filename='images/Starter/{}.png'.format(session["Starter"]))}}></a>
 		{%endif%}
 
 		{% if session["Main"] != None %}
-			<a href="/Step2"><img id='Main'class="Main" src={{url_for('static', filename='images/Main/{}.png'.format(session["Main"]))}}></a>
+			<a href="/Step2"><img id='Main' class="Main" src={{url_for('static', filename='images/Main/{}.png'.format(session["Main"]))}}></a>
 		{%endif%}
 
 		{% if session["Cheese"] != None %}
-			<a href="/Step3"><img id='Cheese'class="Cheese" src={{url_for('static', filename='images/Cheese/{}.png'.format(session["Cheese"]))}}></a>
+			<a href="/Step3"><img id='Cheese' class="Cheese" src={{url_for('static', filename='images/Cheese/{}.png'.format(session["Cheese"]))}}></a>
 		{%endif%}
 
 		{% if Which_Dessert != 'None.css' %}
-			<img id='Dessert'class="Dessert" src={{url_for('static', filename='images/Dessert/{}.png'.format(Which_Dessert.replace(".css","")))}}>
+			<img id='Dessert' class="Dessert" src={{url_for('static', filename='images/Dessert/{}.png'.format(Which_Dessert.replace(".css","")))}}>
 		{%endif%}
 		
 		<img id="ProgressBar" style="width: 100%;" src="{{url_for('static', filename='images/Progress.png')}}">

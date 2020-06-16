@@ -1,5 +1,12 @@
 from flask import Flask, render_template, request, redirect, session, url_for, make_response
 
+from flask_caching import Cache
+
+cache = Cache()
+
+
+
+
 import datetime
 
 from random import randint
@@ -8,6 +15,10 @@ import pdfkit
 
 
 app = Flask(__name__, static_url_path='/static')
+
+app.config['CACHE_TYPE'] = 'simple'
+
+cache.init_app(app)
 
 app.secret_key = 'Borigo'
 
@@ -32,6 +43,7 @@ Food2Price = {
 
 
 @app.route('/')
+@cache.cached(timeout=100)
 def index():
 	session['Starter'] = None
 	session['Main'] = None
@@ -40,10 +52,12 @@ def index():
 	return render_template("index.html")
 
 @app.route('/Recipes')
+@cache.cached(timeout=50)
 def Recipes():
 	return render_template("recipe.html")
 
 @app.route('/Description')
+@cache.cached(timeout=50)
 def Description():
 	return render_template('description.html')
 

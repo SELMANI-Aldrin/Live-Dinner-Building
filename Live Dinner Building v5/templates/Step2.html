@@ -46,11 +46,11 @@
 
 	<div class="imgs">
 		{% if session["Starter"] != None %}
-			<a href="/Step1"><img id='Starter'class="Starter" src={{url_for('static', filename='images/Starter/{}.png'.format(session["Starter"]))}}></a>
+			<a href="/Step1"><img id='Starter' class="Starter" src={{url_for('static', filename='images/Starter/{}.png'.format(session["Starter"]))}}></a>
 		{%endif%}
 
 		{% if Which_Main != 'None.css' %}
-			<img id='Main'class="Main" src={{url_for('static', filename='images/Main/{}.png'.format(Which_Main.replace(".css","")))}}>
+			<img id='Main' class="Main" src={{url_for('static', filename='images/Main/{}.png'.format(Which_Main.replace(".css","")))}}>
 		{%endif%}
 
 		<img id="ProgressBar" style="width: 100%;" src="{{url_for('static', filename='images/Progress.png')}}">

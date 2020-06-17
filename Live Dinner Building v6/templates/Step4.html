@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block style %}{{url_for('static', filename='css/style.css')}}{% endblock %}
+{% block Sstyle %}<link rel="stylesheet" type="text/css" href= {{url_for('static', filename='css/{}'.format(Which_Dessert))}}>{% endblock %}
+
+{% block body %}
+	<h1 style="height: 28px; font-size: 3.0vw;"> Le dernier mais pas des moindres: le dessert!</h1>
+	<div class="head">
+		<form class="A">
+			<input type="radio" class="null opt1" id= "Citron" name="Dessert" value="Citron" checked>
+			<input type="radio" id= "Coupe" name="Dessert" value="Coupe" class="null opt2">
+			<input type="radio" id= "Eclairs" name="Dessert" value="Eclairs" class="null opt3">
+			<input type="radio" id= "Tiramisu" name="Dessert" value="Tiramisu" class="null opt4">
+		
+			<table>
+				<tr class="option1">
+					
+					<td class="one"><label for="Citron" class="lab">Tarte aux citrons meringuée 8.50 <span></span></label></td>
+				</tr>		
+				<tr class="option2">
+					<td class="one"><label for="Coupe" class="lab">Coupe de glace gourmande 6.50 <span></span></label></td>
+				</tr>
+				
+				<tr class="option3">		
+					<td class="one"><label for="Eclairs" class="lab">Eclairs maison(3) 5.00 <span></span></label></td>
+				</tr>
+				<tr class="option4">	
+					<td class="one"><label for="Tiramisu" class="lab">Tiramisu 6.00 <span></span></label></td>
+				</tr>
+				<br/>
+			</table>
+			  <button type="submit">Choisir</button>
+		</form>
+
+	<form class="B">
+		<input type="submit" id ="Désélectionner" name ="Désélectionner" value="Désélectionner">
+	</form>
+	</div>
+	<a href="/Bill"> 		<svg version="1.1" class="next" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		viewBox="0 0 512.008 512.008" style="enable-background:new 0 0 512.008 512.008;" xml:space="preserve">
+		<defs>
+			<linearGradient id="myG" x1="3%" y1="100%" x2="97%" y2="0%">
+				<stop offset="0" stop-color="rgba(83,58,123,1)">
+   				</stop>
+				<stop offset="1" stop-color="rgb(105,105,179,0)">
+   				</stop>
+				<stop offset="1" stop-color="rgb(255,0,0,0)"></stop>
+		</linearGradient></defs>
+	   <path d="M306.219,45.796c-21.838-21.838-57.245-21.838-79.083,0s-21.838,57.245,0,79.083l77.781,77.803
+	   H53.333C23.878,202.682,0,226.56,0,256.015c0,29.455,23.878,53.333,53.333,53.333h251.584l-77.781,77.781
+	   c-21.838,21.838-21.838,57.245,0,79.083c21.838,21.838,57.245,21.838,79.083,0l202.667-202.667c4.164-4.165,4.164-10.917,0-15.083
+	   L306.219,45.796z"/>
+   </svg> </a>	
+
+	<div class="imgs">
+		{% if session["Starter"] != None %}
+			<a href="/Step1"><img id='Starter' class="Starter" src={{url_for('static', filename='images/Starter/{}.png'.format(session["Starter"]))}}></a>
+		{%endif%}
+
+		{% if session["Main"] != None %}
+			<a href="/Step2"><img id='Main' class="Main" src={{url_for('static', filename='images/Main/{}.png'.format(session["Main"]))}}></a>
+		{%endif%}
+
+		{% if session["Cheese"] != None %}
+			<a href="/Step3"><img id='Cheese' class="Cheese" src={{url_for('static', filename='images/Cheese/{}.png'.format(session["Cheese"]))}}></a>
+		{%endif%}
+
+		{% if Which_Dessert != 'None.css' %}
+			<img id='Dessert' class="Dessert" src={{url_for('static', filename='images/Dessert/{}.png'.format(Which_Dessert.replace(".css","")))}}>
+		{%endif%}
+		
+		<img id="ProgressBar" style="width: 100%;" src="{{url_for('static', filename='images/Progress.png')}}">
+		
+	</div>
+  
+{% endblock %}

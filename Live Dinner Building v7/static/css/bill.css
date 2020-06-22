@@ -1,0 +1,188 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+body{margin:0}
+.back a{
+	text-decoration: none;
+	color:white;
+	font-weight: bold;
+	font-size: 150%;
+	border-radius: 10px;
+	border: 2px solid white;
+	padding: 15px;
+	font-family: sans-serif;
+	-webkit-transition: all .25s;
+	-o-transition: all .25s;
+	transition: all .25s;
+}
+
+.back a:hover{
+	background-color: var(--second-color);
+	border-color: var(--second-color)
+}
+
+.back h3{
+	text-align: center;
+	font-weight: bold;
+	font-size: 150%;
+	color: var(--second-color);
+}
+
+h1{
+	width: 100%;
+	color: var(--third-color, purple);
+	margin: 7.7px auto;
+	text-align: center;
+}
+
+
+
+.Resto{
+	font-weight: bold;
+	text-align: center;
+}
+
+.SResto {
+	font-size: 90%;
+	text-align: center;
+	color: rgb(39, 39, 39);
+}
+
+.horaire {
+	text-align: center;
+	font-size: 85%;
+	color: rgb(19, 19, 19);
+	padding-bottom: 5px;
+	border-bottom: 1px dashed black;
+}
+
+.tot{
+	font-weight: bold;
+}
+
+.last {
+	padding-bottom: 5px;
+	border-bottom: 1px dashed black;
+}
+
+.prix {
+	text-align: right;
+}
+
+.dots {
+	text-align: center;
+}
+
+
+
+.no {
+	color: rgb(240, 240, 240);
+}
+
+.principal {
+	border-bottom: 1px solid black;
+}
+
+.TitleTicket {
+	text-align: center;
+	font-weight: bolder;
+	font-size: 150%;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+
+table {
+	background-color: rgb(240, 240, 240);
+}
+.container{
+	position:relative;
+	width: 100vw;
+	height: 74vh;
+	margin:0 auto;
+	margin-bottom: 5px;
+	display: -ms-grid;
+	display: grid;
+	place-items: center;
+}
+.card{
+	position:absolute;
+	width:400px;
+	height:363px;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.card:hover{-webkit-transform: rotateY(180deg);transform: rotateY(180deg);}
+.front{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+}
+.tableaufacture{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+
+}
+
+.back{
+	position:absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: space-evenly;
+	    -ms-flex-pack: space-evenly;
+	        justify-content: space-evenly;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(193, 218, 223);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	-webkit-transform: rotateY(180deg);
+	        transform: rotateY(180deg);
+}
+
+td.article {
+	width: 110px;
+	height: 30px;
+	padding-left: 10px;
+}
+
+td.prix {
+	width: 60px;
+	height: 30px;
+	padding-right: 10px;
+}
+
+.whitespace {
+	width: 100vw;
+	height: calc(100vh - 100px);
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	position: absolute;
+	bottom: 0;
+}
+.all{
+	width: 100vw;
+	margin: auto;
+}

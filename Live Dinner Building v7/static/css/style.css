@@ -1,0 +1,396 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+body{
+	padding:0;
+	margin:0;
+	overflow: hidden;
+	width: 100vw;
+}
+ 
+h1 {
+    margin: 0;
+    padding: 1.5vw;
+    text-align: center;
+    color: var(--third-color, purple);
+    font-family: sans-serif;
+    font-size: 23px;
+}
+
+h2{
+	text-align: center;
+	color: black;
+}
+
+form.A{
+	margin: 0 auto;
+	width: 100%;
+	
+}
+
+label{
+	color: white;
+	font-family: sans-serif;
+	font-weight: bold;
+	width: 20%;
+}
+
+form.B{
+	margin: 0 auto;
+	width: 100%;
+}
+
+
+.head{
+	position:relative;
+	background-color: var(--second-color);
+	height: calc(100vh - 50vw);
+	min-height: 126px;
+	max-height: 250px;
+}
+
+
+button{
+	color: rgb(2, 12, 58);
+	width: 20%;
+	position: absolute;
+	height: 30px;
+	border: 1px solid lightgray;
+	border-right-width: 1px;
+	border-right-color: whitesmoke;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	bottom: 0;
+	left: 50%;
+	-webkit-transform: translate(-100%, -50%);
+	    -ms-transform: translate(-100%, -50%);
+	        transform: translate(-100%, -50%);
+	min-width: 120px;
+}
+
+
+#Désélectionner{
+	position: absolute;
+	bottom: 0;
+	-webkit-transform: translate(100%, -50%);
+	    -ms-transform: translate(100%, -50%);
+	        transform: translate(100%, -50%);
+	right: 50%;
+	width: 20%;
+	height: 30px;
+	border: 1px solid lightgray;
+	border-left-width: 1px;
+	border-left-color: whitesmoke;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	color: rgb(2, 12, 58);
+	min-width: 120px;
+}
+
+a{
+	margin: 0 auto;
+	border-radius: 5px;
+}
+
+.next{
+	width: 10%;
+	position: absolute;	
+	right: 0;
+	z-index: 50;
+}
+
+.imgs{
+	display: -ms-grid;
+	display: grid;
+	position: relative;
+	top: 4vh;
+	width: 100vw;
+}
+
+#Progress{
+	margin-left: auto;
+	margin-right: auto;
+	position:relative
+}
+
+#ProgressBar{
+	width: 100vw;
+	max-width: 1000px;
+	-webkit-filter: drop-shadow(-5px 5px 3px lightgray) contrast(4);
+	        filter: drop-shadow(-5px 5px 3px lightgray) contrast(4);
+	-webkit-animation-name: appear;
+	        animation-name: appear;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay: 1s;
+	        animation-delay: 1s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	-webkit-animation-timing-function: ease;
+	        animation-timing-function: ease
+}
+@-webkit-keyframes appear{
+	from{-webkit-filter: drop-shadow(-5px 5px 3px lightgray) contrast(4);filter: drop-shadow(-5px 5px 3px lightgray) contrast(4);}
+	to{-webkit-filter: drop-shadow(-5px 5px 3px lightgray) contrast(1);filter: drop-shadow(-5px 5px 3px lightgray) contrast(1);}
+}
+@keyframes appear{
+	from{-webkit-filter: drop-shadow(-5px 5px 3px lightgray) contrast(4);filter: drop-shadow(-5px 5px 3px lightgray) contrast(4);}
+	to{-webkit-filter: drop-shadow(-5px 5px 3px lightgray) contrast(1);filter: drop-shadow(-5px 5px 3px lightgray) contrast(1);}
+}
+
+.Starter{
+	position: absolute;
+	top: 7.7%;
+	left: 4.3%;
+	z-index: 3;
+	width: 18%;
+	opacity: 0;
+	-webkit-animation-name: appear2;
+	        animation-name: appear2;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay: 2s;
+	        animation-delay: 2s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	-webkit-animation-timing-function: ease;
+	        animation-timing-function: ease;
+}
+
+@-webkit-keyframes appear2{
+	from{ opacity:0}
+	to{opacity:1}
+}
+
+@keyframes appear2{
+	from{ opacity:0}
+	to{opacity:1}
+}
+
+.Main{
+	position: absolute;
+	bottom:9%;
+	left: 29.3%;
+	z-index: 3;
+	width: 18%;
+	opacity: 0;
+	-webkit-animation-name: appear2;
+	        animation-name: appear2;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay: 2s;
+	        animation-delay: 2s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	-webkit-animation-timing-function: ease;
+	        animation-timing-function: ease;
+}
+
+.Cheese{
+	position: absolute;
+	top: 7.7%;
+	right: 27.8%;
+	z-index: 3;
+	width: 18%;
+	opacity: 0;
+	-webkit-animation-name: appear2;
+	        animation-name: appear2;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay: 2s;
+	        animation-delay: 2s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	-webkit-animation-timing-function: ease;
+	        animation-timing-function: ease;
+}
+
+.Dessert{
+	position: absolute;
+	bottom:9%;
+	right: 2.5%;
+	z-index: 3;
+	width: 18%;
+	opacity: 0;
+	-webkit-animation-name: appear2;
+	        animation-name: appear2;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay: 2s;
+	        animation-delay: 2s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	-webkit-animation-timing-function: ease;
+	        animation-timing-function: ease;
+}
+
+button, #Désélectionner{font-weight: bold;}
+
+button:hover, #Désélectionner:hover{
+	background-color: var(--second-color);
+	color: white;
+	font-size: 100%;
+}
+
+svg.next{
+	-webkit-transition: all ease;
+	-o-transition: all ease;
+	transition: all ease;
+}
+
+svg.next path{
+	stroke-width: 5px;
+	stroke: var(--third-color);
+   fill:none;
+   fill-opacity:0;
+	stroke-dasharray: 1832px; 
+	stroke-dashoffset: 0px;
+	-webkit-transition: 2s;
+	-o-transition: 2s;
+	transition: 2s
+}
+
+svg.next:hover path{
+	-webkit-animation: arrow 1s ease;
+	        animation: arrow 1s ease;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+  
+@-webkit-keyframes arrow{
+	0%{
+	  stroke-dasharray: 1832px;
+	stroke-dashoffset: 0px;
+	fill: url(#myG);
+	fill-opacity:0;
+	}
+	
+	100%{
+	  stroke-dasharray: 1832px;
+	stroke-dashoffset: 1832px;
+	fill: url(#myG);
+	fill-opacity:1
+  
+}
+	
+}
+  
+@keyframes arrow{
+	0%{
+	  stroke-dasharray: 1832px;
+	stroke-dashoffset: 0px;
+	fill: url(#myG);
+	fill-opacity:0;
+	}
+	
+	100%{
+	  stroke-dasharray: 1832px;
+	stroke-dashoffset: 1832px;
+	fill: url(#myG);
+	fill-opacity:1
+  
+}
+	
+}
+
+
+
+
+tr{
+	display:inline-block;
+	width:20%;
+	min-width: 160px;
+	min-height: 38px;
+}
+
+.one{-webkit-box-sizing: border-box;box-sizing: border-box;}
+
+.lab{
+	text-align: left;
+	vertical-align: middle;
+	position: relative;
+	cursor: pointer;
+	font-size: 80%;
+	padding-left: 35px;
+	display:-webkit-inline-box;
+	display:-ms-inline-flexbox;
+	display:inline-flex;
+	width:80%;
+}
+
+.lab span{
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	border: 3px solid var(--first-color);
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0
+}
+
+.lab span:after{
+	content: "";
+	height: 8px;
+	width: 8px;
+	background-color: var(--first-color);
+	display: block;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	-webkit-transform: translate(-50%, -50%) scale(0);
+	    -ms-transform: translate(-50%, -50%) scale(0);
+	        transform: translate(-50%, -50%) scale(0);
+	border-radius: 50%;
+	-webkit-transition: 300ms ease-in-out 0s;
+	-o-transition: 300ms ease-in-out 0s;
+	transition: 300ms ease-in-out 0s
+}
+
+tbody{
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack: space-evenly;
+	    -ms-flex-pack: space-evenly;
+	        justify-content: space-evenly;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+table{
+	margin-top: -12px;
+	width: 100%;
+	margin-bottom: 4px ;
+}
+
+.opt1:checked ~ table .option1 span:after{
+	-webkit-transform: translate(-50%, -50%) scale(1.5);
+	    -ms-transform: translate(-50%, -50%) scale(1.5);
+	        transform: translate(-50%, -50%) scale(1.5);
+}
+
+.opt2:checked ~ table .option2 span:after{
+	-webkit-transform: translate(-50%, -50%) scale(1.5);
+	    -ms-transform: translate(-50%, -50%) scale(1.5);
+	        transform: translate(-50%, -50%) scale(1.5);
+}
+
+.opt3:checked ~ table .option3 span:after{
+	-webkit-transform: translate(-50%, -50%) scale(1.5);
+	    -ms-transform: translate(-50%, -50%) scale(1.5);
+	        transform: translate(-50%, -50%) scale(1.5);
+}
+
+
+.opt4:checked ~ table .option4 span:after{
+	-webkit-transform: translate(-50%, -50%) scale(1.5);
+	    -ms-transform: translate(-50%, -50%) scale(1.5);
+	        transform: translate(-50%, -50%) scale(1.5);
+}
+
+.null{display:none}

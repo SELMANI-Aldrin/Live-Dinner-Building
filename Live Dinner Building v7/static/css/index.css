@@ -1,0 +1,192 @@
+:root {
+	--first-color: #98C1D9;
+	--second-color: #6969B3;
+	--third-color: #533A7B;
+	--fourth-color: #4B244A;
+	--fifth-color: #25171A;
+	--sixth-color: #9592CF;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background: white;
+	min-height: 100vh;
+}
+
+h1 {
+	color: var(--third-color, purple);
+	text-align: center;
+}
+
+h2 {
+	color: var(--third-color);
+	opacity: 0.5;
+	text-align: center;
+}
+
+button {
+	display: block;
+	width: 20%;
+	margin: 5px auto;
+	border: 1px solid var(--fourth-color);
+	border-radius: 2px;
+	padding: 5px 0;
+	text-align: center;
+	font-size: 120%;
+	color: var(--third-color);
+	cursor: pointer;
+	min-width: 134px;
+	max-width: 149px;
+}
+
+a {
+	text-decoration: none;
+}
+
+button:hover {
+	border: 1px solid var(--third-color, grey);
+	;
+	background-color: var(--second-color, lightgrey);
+	;
+	color: white;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 125%;
+}
+
+.randtitle {
+	transform: translateY(75%);
+	transition: all 0.25s ease;
+	z-index: 2;
+}
+
+.randbtn button {
+	transform: translateY(-75%);
+	transition: all 0.25s ease;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.randmeal:hover .randtitle {
+	transform: translateY(0);
+}
+
+.randmeal:hover .randbtn button {
+	transform: translateY(0);
+	visibility: visible;
+	opacity: 1;
+}
+
+.name-box {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background: var(--fifth-color, #2f3640);
+	padding: 10px;
+	height: 40px;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+.name-button {
+	float: right;
+	background-color: white;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	border-radius: 50px;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.name-button:hover {
+	background: var(--second-color);
+	transform: scale(1.1);
+}
+
+.name-button:hover svg path {
+	stroke: white;
+	fill: white;
+}
+
+.name-text {
+	border: none;
+	padding: 0;
+	outline: none;
+	background: none;
+	float: left;
+	color: var(--sixth-color);
+	font-size: 16px;
+	line-height: 40px;
+	transition: 0.5s;
+	font-family: 'Itim', cursive;
+	max-width: 75vw;
+	width: 0px;
+}
+
+.content:hover .name-box .name-text {
+	width: 240px;
+	padding: 0 6px;
+}
+
+.svgimage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	z-index: 0;
+	overflow: hidden;
+}
+
+.valid {
+	position: absolute;
+	top: 17.5%;
+	left: 22.5%;
+	width: 55%;
+	height: 55%;
+	transform: rotate(45deg);
+}
+
+.valid path {
+	stroke: var(--second-color);
+	fill: var(--second-color);
+	transition: 0.5s
+}
+
+.inputzone {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	opacity: 0;
+	padding: 0;
+	border: none;
+	background: transparent;
+	margin: 0;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.content {
+	height: 60px;
+	margin-top: 4vw;
+}
+
+.whitespace {
+	width: 100vw;
+	height: calc(100vh - 100px);
+	display: flex;
+	align-items: center;
+}
+
+.all {
+	width: 100vw;
+	margin: auto;
+}

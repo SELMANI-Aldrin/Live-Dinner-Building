@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block style %}{{url_for('static', filename='css/style.css')}}{% endblock %}
+{% block Sstyle %}<link rel="stylesheet" type="text/css" href= {{url_for('static', filename='css/{}'.format(Which_Cheese))}}>{% endblock %}
+
+{% block body %}
+	<h1>Vous aimez le fromage maison?</h1>
+	<div class="head">
+	<form class="A">
+		<input type="radio" id= "Brie" name="Cheese" value="Brie" checked class="null opt1">
+		<input type="radio" id= "Gouda" name="Cheese" value="Gouda" class="null opt2">
+		<input type="radio" id= "Camenbert" name="Cheese" value="Camenbert" class="null opt3">
+		<input type="radio" id= "Riccota" name="Cheese" value="Riccota" class="null opt4">
+		<table>
+			<tr class="option1">
+				<td class="one"><label for="Brie" class="lab">Brie maison 5.00 <span></span></label></td>
+			</tr>
+			<tr class="option2">
+				<td class="one"><label for="Gouda" class="lab">Gouda maison 3.50 <span></span></label></td>
+			</tr>
+			<tr class="option3">
+				<td class="one"><label for="Camenbert" class="lab">Camenbert maison 3.00<span></span></label></td>
+			</tr>
+			<tr class="option4">
+				<td class="one"><label for="Riccota" class="lab">Ricotta maison 4.50 <span></span></label></td>
+			</tr>
+			<br/>
+		</table>
+		<button type="submit">Choisir</button>
+	</form>
+	<form class="B">
+		<input type="submit" id ="Désélectionner" name ="Désélectionner" value="Désélectionner">
+	</form>
+	</div>
+	<a href="/Step4">
+	<svg version="1.1" class="next" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		viewBox="0 0 512.008 512.008" style="enable-background:new 0 0 512.008 512.008;" xml:space="preserve">
+		<defs>
+			<linearGradient id="myG" x1="3%" y1="100%" x2="97%" y2="0%">
+				<stop offset="0" stop-color="rgba(83,58,123,1)">
+				</stop>
+				<stop offset="1" stop-color="rgb(105,105,179,0)">
+				</stop>
+				<stop offset="1" stop-color="rgb(255,0,0,0)"></stop>
+			</linearGradient>
+		</defs>
+		<path d="M306.219,45.796c-21.838-21.838-57.245-21.838-79.083,0s-21.838,57.245,0,79.083l77.781,77.803
+			H53.333C23.878,202.682,0,226.56,0,256.015c0,29.455,23.878,53.333,53.333,53.333h251.584l-77.781,77.781
+			c-21.838,21.838-21.838,57.245,0,79.083c21.838,21.838,57.245,21.838,79.083,0l202.667-202.667c4.164-4.165,4.164-10.917,0-15.083
+			L306.219,45.796z"/>
+	</svg>
+	</a>
+	<div class="imgs">
+	<div id="Progress">
+		<img id="ProgressBar"  src="{{url_for('static', filename='images/Progress.png')}}">
+		{% if session["Starter"] != None %}
+		<a href="/Step1"><img id='Starter' class="Starter" src={{url_for('static', filename='images/Starter/{}.png'.format(session["Starter"]))}}></a>
+		{%endif%}
+		{% if session["Main"] != None %}
+		<a href="/Step2"><img id='Main' class="Main" src={{url_for('static', filename='images/Main/{}.png'.format(session["Main"]))}}></a>
+		{%endif%}
+		{% if Which_Cheese != 'None.css' %}
+		<img id='Cheese' class="Cheese" src={{url_for('static', filename='images/Cheese/{}.png'.format(Which_Cheese.replace(".css","")))}}>
+		{%endif%}
+	</div>
+	</div>
+
+  
+{% endblock %}

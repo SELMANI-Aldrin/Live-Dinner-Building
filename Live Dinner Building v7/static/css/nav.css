@@ -1,0 +1,105 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+:root {
+	--first-color: #98C1D9;
+	--second-color: #6969B3;
+	--third-color: #533A7B;
+	--fourth-color: #4B244A;
+	--fifth-color: #25171A;
+	--sixth-color: #9592CF;
+}
+
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+	width: 100%;
+}
+
+.topnav a {
+	font-family: Arial, Helvetica, sans-serif;
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.ico {
+	margin: 0;
+	border-width: 0;
+	float: left;
+	border-radius: 50px;
+	padding: 3px 3px;
+	width: 42px;
+	height: 43px;
+	-webkit-filter: hue-rotate(-83deg) drop-shadow(1px 1px 20px black);
+	filter: hue-rotate(-83deg) drop-shadow(1px 1px 20px black);
+}
+
+.Restaurant:hover+.icobox svg, .ico:hover {
+	-webkit-animation: 0.5s roto linear infinite;
+	animation: 0.5s roto linear infinite;
+}
+
+@-webkit-keyframes roto {
+	from {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg)
+	}
+}
+
+@keyframes roto {
+	from {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg)
+	}
+}
+
+.ico2 {
+	width: 12.5%;
+	height: 12.5%;
+	text-align: center;
+	padding: 0;
+	border-width: 0;
+	border-radius: 50px;
+	margin: 0 43.25%;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.icobox {
+	padding-right: 4px;
+	background-color: var(--third-color);
+	float: left;
+}
+
+.Restaurant {
+	background-color: var(--third-color);
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	margin: 0 0;
+	padding-left: 5%;
+	padding-right: 1.5%;
+}
+
+.topnav a:hover {
+	background-color: var(--sixth-color);
+}

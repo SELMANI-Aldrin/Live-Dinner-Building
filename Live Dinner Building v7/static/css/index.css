@@ -87,6 +87,7 @@ button:hover {
 	height: 40px;
 	border-radius: 50px;
 	overflow: hidden;
+	max-width: calc(100vw - 35px)
 }
 
 .name-button {
@@ -125,7 +126,7 @@ button:hover {
 	line-height: 40px;
 	transition: 0.5s;
 	font-family: 'Itim', cursive;
-	max-width: 75vw;
+	max-width: calc(100% - 52px);
 	width: 0px;
 }
 
@@ -177,6 +178,7 @@ button:hover {
 .content {
 	height: 60px;
 	margin-top: 4vw;
+	transition: all .4s cubic-bezier(.64,.05,.25,1);
 }
 
 .whitespace {
